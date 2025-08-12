@@ -1,5 +1,5 @@
 import pytest
-from main import sort
+from sort import sort
 
 @pytest.mark.parametrize("input, expected", [
     ((1, 2, 3, 4), "STANDARD"),

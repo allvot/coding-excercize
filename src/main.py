@@ -1,13 +1,12 @@
-import os
+from sort import sort
 
-def sort(width, height, length, mass):
-    volume = width * height * length
-    is_bulky = volume >= 1000000
-    is_heavy = mass >= 20
+while True:
+    print("--------------------------------")
+    width = int(input("Input width: "))
+    height = int(input("Input height: "))
+    length = int(input("Input length: "))
+    mass = int(input("Input mass: "))
 
-    if is_bulky and is_heavy:
-        return "REJECTED"
-    elif is_bulky or is_heavy:
-        return "SPECIAL"
-    else:
-        return "STANDARD"
+    print(sort(width, height, length, mass))
+    if input("Continue? (y/n) ").lower() == "n":
+        break
